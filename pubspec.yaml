@@ -56,6 +56,24 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
 
+melos:
+  packages:
+    - apps/*
+    - packages/*
+
+  scripts:
+    run:rider:
+      name: Run Rider App
+      exec: flutter run
+      packageFilters:
+        scope: rider_app
+
+    run:driver:
+      name: Run Driver App
+      exec: flutter run
+      packageFilters:
+        scope: driver_app
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
